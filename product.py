@@ -1,3 +1,14 @@
+#讀取檔案
+products = []
+with open('products.csv','r') as f:
+    for line in f:
+        if '商品,價格' in line:
+            continue #遇到"商品,價格"字串，則跳過此行
+        name,price = line.strip().split(',')
+        products.append([name,price])
+
+print(products)
+
 products = []
 while True:
     name = input('請輸入商品名稱:')
