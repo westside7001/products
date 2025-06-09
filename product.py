@@ -45,7 +45,7 @@ def main():
 
     else:
         print('file is not exist')
-
+    read_file(filename)
     products = user_input(products)
     print_products(products)
     write_file('products.csv', products)
